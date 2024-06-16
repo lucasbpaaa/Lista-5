@@ -114,7 +114,7 @@ roman_number()
 
 #Question 3:
 def power_function(x:float, n:int):
-    prod = 1
+    prod = 1.0
     if n>=0:
         for _ in range(n): #Estamos multiplicando prod por x, atualizando o valor de prod e multiplicando de novo. Esse processo é feito n vezes, ou seja, temos x**n.
             prod = prod*x  
@@ -123,4 +123,4 @@ def power_function(x:float, n:int):
             prod = prod*(1/x)
     return prod
 
-power_function(2.0, -7)
+power_function(2.0, 0)
