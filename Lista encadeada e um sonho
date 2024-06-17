@@ -140,3 +140,32 @@ def find_only(lista):
             return chave
 find_only([1, 1, 2 ,3, 2, 10000000, 4, 4, 3])
 
+#Question 5:
+
+def longest_common_prefix(strs):
+    if not strs:
+        return ""
+    
+    longest_prefix = strs[0]
+    
+    for i in range(1, len(strs)):
+        current_string = strs[i]
+        new_prefix = ""
+        
+      
+        for j in range(min(len(longest_prefix), len(current_string))):
+            if longest_prefix[j] == current_string[j]:
+                new_prefix += longest_prefix[j]
+            else:
+                break
+        
+        # Update longest_prefix to the common prefix found so far
+        longest_prefix = new_prefix
+        
+        # If at any point longest_prefix becomes empty, return immediately
+        if longest_prefix == "":
+            return ""
+    
+    return longest_prefix
+
+longest_common_prefix(['flowers', 'flor', 'fluido',])
